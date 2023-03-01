@@ -7,6 +7,7 @@ class User < ApplicationRecord
     validates :username, presence: true
     validates :county , presence: true
     validates :constituency , presence: true
+    validates :profile_picture , presence: true
     
 
 end
