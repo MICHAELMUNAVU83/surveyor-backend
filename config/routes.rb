@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :counties 
+  get "/counties", to: "counties#index"
+  get "/counties/:name", to: "counties#show"
     get "/constituencies/:id", to: "constituencies#county_constituencies"
   
   # config/routes.rb

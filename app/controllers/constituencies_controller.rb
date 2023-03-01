@@ -7,11 +7,6 @@ class ConstituenciesController < ApplicationController
 
    
 
-   
-    def county_constituencies
-        @constituencies = Constituency.find_by(name: params[:name]) 
-        
-        render json: @constituencies
-    end
+  
 
 end
