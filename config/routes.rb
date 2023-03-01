@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :counties
-  get "/constituencies/:county_id", to: "constituencies#county_constituencies"
+  resources :counties 
+    get "/constituencies/:id", to: "constituencies#county_constituencies"
+  
   # config/routes.rb
   namespace :api do
     namespace :v1 do

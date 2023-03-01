@@ -9,7 +9,8 @@ class ConstituenciesController < ApplicationController
 
    
     def county_constituencies
-        @constituencies = Constituency.where(county_id: params[:county_id])
+        @constituencies = Constituency.find_by(name: params[:name]) 
+        
         render json: @constituencies
     end
 
