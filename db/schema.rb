@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_033101) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_160037) do
   create_table "constituencies", force: :cascade do |t|
     t.string "name"
     t.integer "county_id", null: false
@@ -23,6 +23,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_033101) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.integer "average_salary_per_month"
+    t.integer "average_rent_per_month"
+    t.integer "happy_with_taxes"
+    t.boolean "happy_with_MCA"
+    t.boolean "happy_with_MP"
+    t.boolean "happy_with_county_gov"
+    t.integer "happy_with_nat_gov"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,4 +53,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_033101) do
   end
 
   add_foreign_key "constituencies", "counties"
+  add_foreign_key "surveys", "users"
 end
