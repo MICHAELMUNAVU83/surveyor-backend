@@ -1207,3 +1207,18 @@ constituencies = Constituency.create(
 
     ]);
     
+
+    puts "Created users"
+
+    User.create([
+        {
+            username:"John Doe",
+            email:"johndoe@gmail.com",
+            password:"password",
+            password_confirmation:"password",
+            county:"Nairobi",
+            constituency:"Westlands",
+            
+        }
+
+    ]);
