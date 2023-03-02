@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :surveys
   
   get "/counties", to: "counties#index"
   get "/counties/:name", to: "counties#show"

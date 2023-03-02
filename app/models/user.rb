@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates :county , presence: true
     validates :constituency , presence: true
     validates :profile_picture , presence: true
+    has_many :surveys
     
 
 end
