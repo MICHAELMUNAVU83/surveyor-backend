@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_160037) do
 
   create_table "surveys", force: :cascade do |t|
     t.integer "average_salary_per_month"
-    t.integer "average_rent_per_month"
+    t.integer "average_expenses_per_month"
     t.integer "happy_with_taxes"
     t.boolean "happy_with_MCA"
     t.boolean "happy_with_MP"

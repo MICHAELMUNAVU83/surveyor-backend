@@ -1218,6 +1218,7 @@ constituencies = Constituency.create(
             password_confirmation:"password",
             county:"Nairobi",
             constituency:"Westlands",
+            profile_picture:"https://res.cloudinary.com/dzqjxjx8p/image/upload/v1544081008/Profile%20Pics/IMG_20181117_153000.jpg",
             
         }
 
