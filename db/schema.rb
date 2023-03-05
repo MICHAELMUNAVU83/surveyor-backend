@@ -29,9 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_160037) do
     t.integer "average_salary_per_month"
     t.integer "average_expenses_per_month"
     t.integer "happy_with_taxes"
-    t.boolean "happy_with_MCA"
-    t.boolean "happy_with_MP"
-    t.boolean "happy_with_county_gov"
+    t.integer "happy_with_county_gov"
     t.integer "happy_with_nat_gov"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -45,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_160037) do
     t.string "email"
     t.string "role", default: "user"
     t.string "password_confirmation"
+    t.string "gender"
     t.string "county"
     t.string "constituency"
     t.datetime "created_at", null: false

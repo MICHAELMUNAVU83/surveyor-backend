@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :role , default: "user"
       t.string :password_confirmation
+      t.string :gender
       t.string :county
       t.string :constituency
 
