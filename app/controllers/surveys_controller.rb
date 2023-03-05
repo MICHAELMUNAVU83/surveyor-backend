@@ -1,4 +1,5 @@
 class SurveysController < ApplicationController
+    skip_before_action :authorized
     def create
         survey = Survey.create(survey_params)
         render json: survey
