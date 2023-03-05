@@ -2,7 +2,8 @@ class Api::V1::UsersController < ApplicationController
     skip_before_action :authorized
 
     def index
-        users = User.all 
+       
+        users = User.all.sample(5)
         render json: users  , include: [:survey]
     end
 
