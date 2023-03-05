@@ -1270,7 +1270,7 @@ Survey.create([
         average_expenses_per_month: 30000,
         happy_with_taxes: 3,
         happy_with_county_gov:2,
-        happy_with_national_gov: 3,
+        happy_with_nat_gov: 3,
         user_id: 1,
         
     },
@@ -1279,7 +1279,7 @@ Survey.create([
         average_expenses_per_month: 20000,
         happy_with_taxes: 1,
         happy_with_county_gov:3,
-        happy_with_national_gov: 4,
+        happy_with_nat_gov: 4,
         user_id: 2,
         
     },
@@ -1288,7 +1288,7 @@ Survey.create([
         average_expenses_per_month: 23000,
         happy_with_taxes: 4,
         happy_with_county_gov:1,
-        happy_with_national_gov: 3,
+        happy_with_nat_gov: 3,
         user_id: 3,
         
     },
@@ -1297,7 +1297,7 @@ Survey.create([
         average_expenses_per_month: 23000,
         happy_with_taxes: 1,
         happy_with_county_gov:2,
-        happy_with_national_gov: 3,
+        happy_with_nat_gov: 3,
         user_id: 4,
         
     }
