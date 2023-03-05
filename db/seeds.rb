@@ -1215,6 +1215,7 @@ constituencies = Constituency.create(
             username:"John Doe",
             email:"johndoe@gmail.com",
             password:"password",
+            gender: "male",
             password_confirmation:"password",
             county:"Nairobi",
             constituency:"Westlands",
