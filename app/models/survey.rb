@@ -9,7 +9,7 @@ class Survey < ApplicationRecord
   before_create :add_survey_count
 
   def add_survey_count
-   self.user.survey_count += 1
+    self.user.survey_count = 1
     self.user.save
    
   end
