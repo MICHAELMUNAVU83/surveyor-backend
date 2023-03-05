@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
       get "/number_of_users" , to: "users#num_of_users"
+      get "/users" , to: "users#index"
     end
   end
 end

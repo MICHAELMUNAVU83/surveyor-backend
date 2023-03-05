@@ -1221,6 +1221,87 @@ constituencies = Constituency.create(
             constituency:"Westlands",
             profile_picture:"https://res.cloudinary.com/dzqjxjx8p/image/upload/v1544081008/Profile%20Pics/IMG_20181117_153000.jpg",
             
+        },
+        {
+            username:"Jane Doe",
+            email:"janedoe@gmail.com",
+            password:"password",
+            gender: "male",
+            password_confirmation:"password",
+            county:"Nairobi",
+            constituency:"Westlands",
+            profile_picture:"https://res.cloudinary.com/dzqjxjx8p/image/upload/v1544081008/Profile%20Pics/IMG_20181117_153000.jpg",
+            
+        },
+        {
+            username:"Michael Doe",
+            email:"michaeldoe@gmail.com",
+            password:"password",
+            gender: "male",
+            password_confirmation:"password",
+            county:"Nairobi",
+            constituency:"Westlands",
+            profile_picture:"https://res.cloudinary.com/dzqjxjx8p/image/upload/v1544081008/Profile%20Pics/IMG_20181117_153000.jpg",
+            
+        },
+        {
+            username:"Lisa Doe",
+            email:"lisadoe@gmail.com",
+            password:"password",
+            gender: "male",
+            password_confirmation:"password",
+            county:"Nairobi",
+            constituency:"Westlands",
+            profile_picture:"https://res.cloudinary.com/dzqjxjx8p/image/upload/v1544081008/Profile%20Pics/IMG_20181117_153000.jpg",
+            
         }
+        
+
 
     ]);
+puts "Finished creating users"
+
+
+puts "Creating surveys "
+
+Survey.create([
+    {
+        average_salary_per_month: 50000,
+        average_expenses_per_month: 30000,
+        happy_with_taxes: 3,
+        happy_with_county_gov:2,
+        happy_with_national_gov: 3,
+        user_id: 1,
+        
+    },
+    {
+        average_salary_per_month: 40000,
+        average_expenses_per_month: 20000,
+        happy_with_taxes: 1,
+        happy_with_county_gov:3,
+        happy_with_national_gov: 4,
+        user_id: 2,
+        
+    },
+    {
+        average_salary_per_month: 45000,
+        average_expenses_per_month: 23000,
+        happy_with_taxes: 4,
+        happy_with_county_gov:1,
+        happy_with_national_gov: 3,
+        user_id: 3,
+        
+    },
+    {
+        average_salary_per_month: 45000,
+        average_expenses_per_month: 23000,
+        happy_with_taxes: 1,
+        happy_with_county_gov:2,
+        happy_with_national_gov: 3,
+        user_id: 4,
+        
+    }
+
+]);
+
+        

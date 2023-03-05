@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates :constituency , presence: true
     validates :gender , presence: true
     validates :profile_picture , presence: true
-    has_many :surveys
+    has_one :survey
     
 
 end

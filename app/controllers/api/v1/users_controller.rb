@@ -1,5 +1,11 @@
 class Api::V1::UsersController < ApplicationController
     skip_before_action :authorized
+
+    def index
+        users = User.all 
+        render json: users , include: [:surveys]
+    end
+
     def create
         user = User.new(user_params)
         if user.save
@@ -15,6 +21,16 @@ class Api::V1::UsersController < ApplicationController
 
     def num_of_users
         render json: User.all.count
+    end
+
+    def female_users
+        render json: User.all.where(gender: "female").count
+
+    end
+
+    def male_users
+        render json: User.all.where(gender: "male").count
+
     end
 
 
