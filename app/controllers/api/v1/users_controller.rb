@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized
     def create
         user = User.new(user_params)
         if user.save
@@ -12,6 +12,11 @@ class Api::V1::UsersController < ApplicationController
     def profile
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
     end
+
+    def num_of_users
+        render json: User.all.count
+    end
+
 
     private
     def user_params

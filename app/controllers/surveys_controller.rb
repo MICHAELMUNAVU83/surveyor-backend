@@ -15,6 +15,33 @@ class SurveysController < ApplicationController
         
     end
 
+    def number_of_surveys
+        render json: Survey.all.count
+    end
+
+
+    def female_surveys
+
+        users = User.all.where(gender: "female")
+        survey = Survey.all.where(user_id: users.ids).count
+        render json: survey
+    end
+
+
+    def male_surveys
+
+        users = User.all.where(gender: "male")
+        survey = Survey.all.where(user_id: users.ids).count
+        render json: survey
+    end
+
+
+
+   
+
+
+
+
     private
 
     def survey_params
