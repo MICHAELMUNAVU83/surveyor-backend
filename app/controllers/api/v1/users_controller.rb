@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
 
     def index
         users = User.all 
-        render json: users , include: [:surveys]
+        render json: users  , include: [:survey]
     end
 
     def create
