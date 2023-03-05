@@ -1,8 +1,18 @@
 class SurveysController < ApplicationController
     skip_before_action :authorized
+    def index
+        surveys = Survey.all
+        render json: surveys
+    end
+
     def create
-        survey = Survey.create(survey_params)
-        render json: survey
+        survey = Survey.new(survey_params)
+        if survey.save
+            render json: {survey: survey}
+        else
+            render json: {error: survey.errors.full_messages}
+        end
+        
     end
 
     private

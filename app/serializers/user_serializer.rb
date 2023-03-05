@@ -1,3 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :username, :email  , :county , :constituency
+  attributes :username, :email  , :county , :constituency , :id
 end
