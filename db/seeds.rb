@@ -1212,6 +1212,18 @@ constituencies = Constituency.create(
 
     User.create([
         {
+            username:"admin",
+            email:"admin@gmail.com",
+            password:"password",
+            gender: "male",
+            password_confirmation:"password",
+            county:"Nairobi",
+            role: "admin",
+            constituency:"Westlands",
+            profile_picture:"https://res.cloudinary.com/dzqjxjx8p/image/upload/v1544081008/Profile%20Pics/IMG_20181117_153000.jpg",
+            
+        },
+        {
             username:"John Doe",
             email:"johndoe@gmail.com",
             password:"password",

@@ -2,8 +2,11 @@ class Api::V1::UsersController < ApplicationController
     skip_before_action :authorized
 
     def index
-        users = User.all 
-        render json: users  , include: [:survey]
+    #    check if user has any surveys
+
+    users = User.joins(:survey).where.not(surveys: { id: nil }).sample(5)
+    render json: users , include: [:survey]
+
     end
 
     def create
@@ -36,6 +39,6 @@ class Api::V1::UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:username, :email, :password, :password_confirmation, :county, :constituency, :profile_picture, :gender )
+        params.require(:user).permit(:username, :email, :password, :password_confirmation, :county, :constituency, :profile_picture, :gender , :survey_count, :role )
     end
 end
