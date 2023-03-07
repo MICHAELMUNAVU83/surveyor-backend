@@ -11,12 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_05_165436) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "constituencies", force: :cascade do |t|
     t.string "name"
-    t.bigint "county_id", null: false
+    t.integer "county_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["county_id"], name: "index_constituencies_on_county_id"
@@ -34,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_05_165436) do
     t.integer "happy_with_taxes"
     t.integer "happy_with_county_gov"
     t.integer "happy_with_nat_gov"
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_surveys_on_user_id"
